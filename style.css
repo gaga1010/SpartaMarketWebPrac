@@ -1,0 +1,43 @@
+/* 중앙 정렬을 위한 스타일 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+/* 카드 스타일 수정 */
+.card {
+    width: 100%;
+    max-width: 20rem;
+    margin: 2rem;
+    /* 카드 사이 간격 추가 */
+    transition: transform 0.3s ease;
+    /* 부드러운 확대/축소 효과 */
+}
+
+/* 카드 이미지 스타일 */
+.card-img-top {
+    object-fit: cover;
+    /* 이미지 비율을 유지하며 채우기 */
+    height: 350px;
+    /* 이미지 높이 설정 */
+}
+
+/* 카드에 마우스 오버 시 확대 효과 */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* 작은 화면에서 세로로 정렬 */
+    }
+
+    .card {
+        margin: 1rem auto 0.5rem auto;
+        /* 작은 화면에서 간격 조정 */
+    }
+}
